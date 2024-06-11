@@ -92,7 +92,7 @@ Binary build Instructions:
 - `./make-four.sh`
   - Notice that we still need to specify the library at build time.
   - TODO triple check this doesn't create any static linking
-- `export DYLD_LIBRARY_PATH=\`pwd\`/fourmsg/lib`
+- ``export DYLD_LIBRARY_PATH=`pwd`/fourmsg/lib``
 - `./a.out`
   - This prints `Hello, dynammic library`
   - If you see the following error message, the `export` didn't work
@@ -121,7 +121,7 @@ Build instructions:
   - Then a final `gcc` to invoke the linker.
   - And because Java on OS X is weird, we have to create a file ending
     in `.jnilib` to be findable by `System.loadLibrary`
-- Then run `java -Djava.library.path=\`pwd\`/lib HelloSwigMain`
+- Then run ``java -Djava.library.path=`pwd`/lib HelloSwigMain``
   - Output is `Hello from swig, JNI User`
 
 If I ever come back to this, I might add some flags to make the output
