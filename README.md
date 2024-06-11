@@ -2,13 +2,13 @@
 
 ## Step 1: Let's create a C program
 
-The simple hello world program in [hello.c] can be compiled using
-`./make-hello.sh` to invoke the [make-hello.sh] shell script. This will
-create a `a.out` file which can be invoked via `./a.out` to print the
-familiar "Hello World!" output.
+The simple hello world program in [hello.c][1] can be compiled using
+`./make-hello.sh` to invoke the [make-hello.sh][2] shell script. This
+will create an `a.out` file which can be invoked via `./a.out` to print
+the familiar "Hello World!" output.
 
-[hello.c](01-hello-world/hello.c)
-[make-hello.sh](01-hello-world/make-hello.sh)
+[1]: 01-hello-world/hello.c
+[2]: 01-hello-world/make-hello.sh
 
 ## Step 2: Let's create a two-file C program
 
@@ -76,16 +76,16 @@ Library build instructions:
   - This creates `libfourmsg.so` in the `lib` subfolder.
   - Notice `-fPIC` in the compiler flags.  This creates "Position
     Independent Code", which is required for dynamic libraries.
-  - Also notice `-Wl,-install_name,libfourmsg.so`.  The [`-Wl` flag]
+  - Also notice `-Wl,-install_name,libfourmsg.so`.  The [`-Wl` flag][3]
     has nothing to do with warnings, confusingly, and instead specifies
     arguments to pass to the linker.
   - The linker options are for telling the library what its name is,
     which is important for versioned libraries with the same API.  For
-    linux, [this is `-soname`], but [on OS X it is `-install_name`]
+    linux, [this is `-soname`][4], but [on OS X it is `-install_name`][5]
 
-[`-Wl` flag](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html#index-Wl)
-[this is `-soname`](https://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html#AEN95)
-[on OS X it is `-install_name`](https://stackoverflow.com/questions/4580789/ld-unknown-option-soname-on-os-x)
+[3]: https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html#index-Wl
+[4]: https://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html#AEN95
+[5]: https://stackoverflow.com/questions/4580789/ld-unknown-option-soname-on-os-x
 
 Binary build Instructions:
 - Go to step folder
